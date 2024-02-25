@@ -12,3 +12,18 @@
 
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 */
+
+.theme-menu__button:disabled::before {
+    content: "▶";
+    position: absolute;
+    animation: arrow .5s ease-in-out alternate infinite;
+}
+
+@keyframes arrow {
+    from {
+        margin-left: -20px;
+    }
+    to {
+        margin-left: -16px;
+    }
+}
