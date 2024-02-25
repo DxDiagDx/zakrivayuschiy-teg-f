@@ -37,7 +37,6 @@ a {
 button,
 input {
   color: currentColor;
-  font-family: inherit;
   font-size: inherit;
   background-color: transparent;
   font-family: var(--font-family-accent);
