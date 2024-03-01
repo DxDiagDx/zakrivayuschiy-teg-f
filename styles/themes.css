@@ -10,6 +10,7 @@
     --font-weight-title: "wght" 700;
     --color-text: #000;
     --color-bg: #fff;
+    --color-blend-mode: #fff;
     --background:
         repeating-linear-gradient(
             to right, 
@@ -31,6 +32,7 @@
     --font-weight-title: "wght" 785;
     --color-text: #00CC14;
     --color-bg: #000;
+    --color-blend-mode: #00CC14;
     --background:
         repeating-linear-gradient(
             to right, 

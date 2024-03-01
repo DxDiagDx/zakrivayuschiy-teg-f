@@ -3,6 +3,7 @@
     --font-family-main: 'Inter', sans-serif;
     --font-family-accent: 'PressStart2P', monospace;
     --border: 2px solid var(--color-text);
+    --color-sparks: #FF0000;
 }
 
 @media (prefers-color-scheme: light) {
@@ -11,6 +12,7 @@
         --font-weight-title: "wght" 700;
         --color-text: #000;
         --color-bg: #fff;
+        --color-blend-mode: #fff;
         --background:
             repeating-linear-gradient(
                 to right, 
@@ -34,6 +36,7 @@
         --font-weight-title: "wght" 785;
         --color-text: #00CC14;
         --color-bg: #000;
+        --color-blend-mode: #00CC14;
         --background:
             repeating-linear-gradient(
                 to right, 

@@ -37,11 +37,11 @@ a {
 button,
 input {
   color: currentColor;
-  font-size: inherit;
+  font-family: inherit;
   background-color: transparent;
-  font-family: var(--font-family-accent);
-  font-variation-settings: var(--font-weight-text);
   cursor: pointer;
+  padding: 0;
+  border: 0;
 }
 
 ul,
