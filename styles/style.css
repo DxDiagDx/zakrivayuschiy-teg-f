@@ -393,8 +393,11 @@
   color: var(--color-text);
 }
 
-.footer__dialog-button {
+.footer__dialog-form {
   grid-column: 1 / span 2;
+}
+
+.footer__dialog-button {  
   width: 100%;
   height: 38px;
   border: var(--border);

@@ -576,13 +576,15 @@
           <use href="./svg/floppy.svg#floppy"></use>
         </svg>
         <h2 class="footer__dialog-title">Вставьте дискету, чтобы продолжить</h2>
-        <button 
-          class="footer__dialog-button button"
-          onclick="window['footer__dialog'].close()"
-          aria-controls="footer__dialog"
-        >
-          <span class="button__text">Ок</span>
-        </button>
+        <form method="dialog" class="footer__dialog-form">
+          <button 
+            class="footer__dialog-button button"
+            onclick="window['footer__dialog'].close()"
+            aria-controls="footer__dialog"
+          >
+            <span class="button__text">Ок</span>
+          </button>
+        </form>
       </dialog>
     </footer>
     <script src="./scripts/like.js"></script>
