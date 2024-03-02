@@ -28,6 +28,7 @@
 
 .button {
   font-family: var(--font-family-accent);
+  font-variation-settings: var(--font-weight-text);
   position: relative;
   transition: box-shadow .3s;
 }
@@ -61,7 +62,6 @@
   position: relative;
   z-index: 1;
   font-size: 14px;
-  font-variation-settings: var(--font-weight-text);
   mix-blend-mode: difference;
   color: var(--color-blend-mode);
 }
@@ -124,7 +124,6 @@
   opacity: 0;
 }
 
-
 /* image-filters */
 
 .saturate {
@@ -164,6 +163,7 @@
   align-items: center;
   background-color: var(--color-bg);
   font-family: var(--font-family-accent);
+  font-variation-settings: var(--font-weight-text);
   text-transform: uppercase;
   padding-top: clamp(7.5rem, 7.1479rem + 1.5023vw, 8.5rem);
   border: var(--border);
@@ -312,7 +312,7 @@
 }
 
 .card__icon-button {
-  height: 36px;
+  height: 38px;
   transition: border 0.3s ease;
   border: 2px solid transparent;
 }
@@ -339,9 +339,13 @@
   margin: 50px 0 100px;
 }
 
+.icon-floppy {
+  color: var(--color-blend-mode);
+  mix-blend-mode: difference;
+}
+
 .button-save {
-  display: grid;
-  grid-template-columns: 21px auto;
+  display: flex;
   gap: 8px;
   align-items: center;
   background-color: var(--color-bg);
@@ -349,10 +353,8 @@
   padding: 15px 19px;
 }
 
-
-.icon-floppy {
-  color: var(--color-blend-mode);
-  mix-blend-mode: difference;
+.button-save .icon-floppy {
+  width: 21px;
 }
 
 .footer__dialog {
@@ -405,11 +407,13 @@
   text-transform: uppercase;
 }
 
-
-
-
-
 @media (width <= 375px) {
+  .button-save {
+    flex-direction: column;
+  }
+  .button-save .icon-floppy {
+    width: 28px;
+  }
   .footer__dialog {
     padding: 30px 42px;
   }
