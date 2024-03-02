@@ -4,6 +4,7 @@
     --font-family-accent: 'PressStart2P', monospace;
     --border: 2px solid var(--color-text);
     --color-sparks: #FF0000;
+    --color-backdrop: #000;
 }
 
 @media (prefers-color-scheme: light) {

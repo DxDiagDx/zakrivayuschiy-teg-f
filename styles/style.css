@@ -101,9 +101,6 @@
   fill: var(--color-sparks);
 }
 
-
-
-
 .like-icon.is-liked .core {
   fill: var(--color-sparks);
 }
@@ -123,12 +120,40 @@
   fill: var(--color-text);
 }
 
-
-
 .like-icon .sparks {
   opacity: 0;
 }
 
+
+/* image-filters */
+
+.saturate {
+  filter: saturate(20%);
+}
+
+.contrast {
+  filter: contrast(190%)
+}
+
+.hue-rotate {
+  filter: hue-rotate(45deg);
+}
+
+.invert {
+  filter: invert(0.7);
+}
+
+.grayscale {
+  filter: grayscale(.8);
+}
+
+.blur {
+  filter: blur(6px);
+}
+
+.multy-filter {
+  filter: sepia(1) brightness(115%) hue-rotate(-90deg);
+}
 
 /* Header */
 
@@ -275,8 +300,9 @@
 .card__description {
   padding: 25px;
   display: grid;
-  gap: 27px;
+  gap: 26px;
   line-height: calc(21/17.8);
+  font-variation-settings: var(--color-text);
 }
 
 .card__like {
@@ -300,8 +326,9 @@
 }
 
 .card__like-button {
-  border: var(--border);
+  height: 38px;
   width: 130px;
+  border: var(--border);
 }
 
 /* Footer */
@@ -313,7 +340,8 @@
 }
 
 .button-save {
-  display: flex;
+  display: grid;
+  grid-template-columns: 21px auto;
   gap: 8px;
   align-items: center;
   background-color: var(--color-bg);
@@ -323,14 +351,69 @@
 
 
 .icon-floppy {
-  width: 21px;
-  height: 21px;
+  color: var(--color-blend-mode);
+  mix-blend-mode: difference;
+}
+
+.footer__dialog {
+  display: grid;
+  position: fixed;
+  grid-template-columns: 39px auto;
+  inset: 0;
+  transition: opacity 0.3s ease-in-out;
+  gap: 30px 20px;
+  padding: 30px;
+  max-width: 357px;
+  background-color: var(--color-bg);
+  border: var(--border);
+}
+
+.footer__dialog::backdrop {
+  background-color: var(--color-backdrop);
+  opacity: .75;
+}
+
+.footer__dialog:not([open]) {
+  pointer-events: none;
+  opacity: 0;
+}
+
+.footer__dialog .icon-floppy {
+  align-self: center;
+}
+
+.footer__dialog-title {
+  font-size: 14px;
+  font-family: var(--font-family-accent);
+  font-variation-settings: var(--font-weight-text);
+  line-height: calc(21/14);
+  text-transform: uppercase;
   color: var(--color-text);
-  border: none;
 }
 
-/*
+.footer__dialog-form {
+  grid-column: 1 / span 2;
+}
+
+.footer__dialog-button {
+  width: 100%;
+  height: 38px;
+  border: var(--border);
+}
+
+.footer__dialog .button__text {
+  text-transform: uppercase;
+}
+
+
+
+
+
 @media (width <= 375px) {
-
+  .footer__dialog {
+    padding: 30px 42px;
+  }
+  .footer__dialog:internal-dialog-in-top-layer {
+    max-width: 341px;
+  }
 }
-*/

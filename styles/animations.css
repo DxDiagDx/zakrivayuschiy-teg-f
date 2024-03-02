@@ -16,6 +16,8 @@
 .theme-menu__button:disabled::before {
     content: "▶";
     position: absolute;
+    top: -20;
+    left: -20;
     animation: arrow .5s ease-in-out alternate infinite;
 }
 

@@ -49,6 +49,7 @@
         </ul>
       </nav>
     </header>
+    
     <main>
       <section class="section">
         <article class="card">
@@ -117,9 +118,9 @@
           <div class="card__image-container">
             <span class="card__label stroke">/HTML</span>
             <img 
-              class="card__image"
+              class="card__image saturate"
               src="./images/image.webp" 
-              alt="Белый автодом на фоне ночного неба. Пиксельная иллюстрация."
+              alt="Белый автодом на фоне ночного неба. Пиксельная иллюстрация с эффектом "
               loading="lazy"
             >
           </div>
@@ -182,7 +183,7 @@
           <div class="card__image-container">
             <span class="card__label stroke">CSS</span>
             <img 
-              class="card__image"
+              class="card__image contrast"
               src="./images/image.webp" 
               alt="Белый автодом на фоне ночного неба. Пиксельная иллюстрация."
               loading="lazy"
@@ -245,7 +246,7 @@
           <div class="card__image-container">
             <span class="card__label stroke">desigions</span>
             <img 
-              class="card__image"
+              class="card__image hue-rotate"
               src="./images/image.webp" 
               alt="Белый автодом на фоне ночного неба. Пиксельная иллюстрация."
               loading="lazy"
@@ -310,7 +311,7 @@
           <div class="card__image-container">
             <span class="card__label stroke">care</span>
             <img 
-              class="card__image"
+              class="card__image invert"
               src="./images/image.webp" 
               alt="Белый автодом на фоне ночного неба. Пиксельная иллюстрация."
               loading="lazy"
@@ -375,7 +376,7 @@
           <div class="card__image-container">
             <span class="card__label stroke">support</span>
             <img 
-              class="card__image"
+              class="card__image grayscale"
               src="./images/image.webp" 
               alt="Белый автодом на фоне ночного неба. Пиксельная иллюстрация."
               loading="lazy"
@@ -438,7 +439,7 @@
           <div class="card__image-container">
             <span class="card__label stroke">lifes-style: none;</span>
             <img 
-              class="card__image"
+              class="card__image blur"
               src="./images/image.webp" 
               alt="Белый автодом на фоне ночного неба. Пиксельная иллюстрация."
               loading="lazy"
@@ -503,7 +504,7 @@
           <div class="card__image-container">
             <span class="card__label stroke">experience</span>
             <img 
-              class="card__image"
+              class="card__image multy-filter"
               src="./images/image.webp" 
               alt="Белый автодом на фоне ночного неба. Пиксельная иллюстрация."
               loading="lazy"
@@ -564,13 +565,41 @@
         </article>
       </section>
     </main>
+    
     <footer class="footer">
-      <button class="button-save button">
-        <svg class="icon-floppy" viewBox="0 0 21 21">
+
+      <button 
+        class="button-save button"
+        onclick="window['footer__dialog'].showModal()" 
+        aria-controls="footer__dialog"
+      >
+        <svg 
+          class="icon-floppy" 
+          viewBox="0 0 21 21"
+          xmlns="http://www.w3.org/2000/svg"
+        >
           <use href="./svg/floppy.svg#floppy"></use>
         </svg>
         <span class="button__text">Сохранить на память</span>
       </button>
+
+      <dialog class="footer__dialog" id="footer__dialog" open>
+        <svg 
+          class="icon-floppy" 
+          fill="none"
+          viewBox="0 0 21 21"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use href="./svg/floppy.svg#floppy"></use>
+        </svg>
+        <h2 class="footer__dialog-title">Вставьте дискету, чтобы продолжить</h2>
+        <form method="dialog" class="footer__dialog-form">
+          <button class="footer__dialog-button button">
+            <span class="button__text">Ок</span>
+          </button>
+        </form>
+      </dialog>
+
     </footer>
     <script src="./scripts/like.js"></script>
   </body>
